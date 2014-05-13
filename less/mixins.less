@@ -1,0 +1,63 @@
+.border-radius(@radius){
+	border-radius: @radius;
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+}
+
+.center{
+	margin: 0 auto;
+}
+
+.scale(@x,@y){
+	transform: scale(@x,@y);
+	-ms-transform: scale(@x,@y); /* IE 9 */
+	-webkit-transform: scale(@x,@y); /* Safari and Chrome */
+}
+
+.box-shadow(@left,@top,@blur,@color){
+	-moz-box-shadow: @left @top @blur @color;
+	-webkit-box-shadow: @left @top @blur @color;
+	box-shadow: @left @top @blur @color;
+}
+
+.box-shadow-spread(@left,@top,@blur,@spread,@color){
+	-moz-box-shadow: @left @top @blur @spread @color;
+	-webkit-box-shadow: @left @top @blur @spread @color;
+	box-shadow: @left @top @blur @spread @color;
+}
+
+.gradient(@light,@dark){
+	background: @light; /* Old browsers */
+	background: -moz-linear-gradient(top,  @light 0%, @dark 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@light), color-stop(100%,@dark)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  @light 0%,@dark 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  @light 0%,@dark 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  @light 0%,@dark 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  @light 0%,@dark 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@light', endColorstr='@dark',GradientType=0 ); /* IE6-9 */
+}
+
+.z-index(@where){
+  z-index: @@where
+}
+
+.inset-box-shadow(@left,@top,@blur,@color){
+	-moz-box-shadow: inset @left @top @blur @color;
+	-webkit-box-shadow: inset @left @top@blur @color;
+	box-shadow: inset @left @top@blur @color;
+}
+
+.insetbox(@colorA,@colorB){
+  .inset-box-shadow(1px,1px,3px,darken(@colorA,40%));
+  .gradient(@colorA,@colorB);
+  padding: @space/2;
+  .border-radius(2px);
+}
+
+.transition(@prop,@time,@effect){
+  -webkit-transition: @prop @time @effect;
+  -moz-transition: @prop @time @effect;
+  -ms-transition: @prop @time @effect;
+  -o-transition: @prop @time @effect;
+  transition: @prop @time @effect;
+}
