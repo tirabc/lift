@@ -1,0 +1,38 @@
+{
+	"name": "lift",
+	"version": "0.0.1",
+	"title": "Lift",
+	"author":  {
+		"name" : "Christian Barras",
+		"email" : "tirabc@gmail.com",
+		"url" : "http://chrsitianbarras.com/"
+	},
+	"licenses": [
+		{
+			"type": "CC-BY-NC",
+			"url": "https://github.com/tirabc/lift/blob/0.0.1/CC-LICENSE.txt"
+		}
+	],
+	"dependencies": {
+		"jquery": ">=1.5"
+	},
+	"description": "Lift is a jQuery plugin that allows you to display very large data in a listview or a table using Lazy-Loading and Virtual Rendering.",
+	 "keywords": [
+		"lazy loading",
+		"virtual rendering",
+		"scroll",
+		"listview",
+		"table",
+		"large data"
+	],
+	"homepage": "https://github.com/tirabc/lift",
+	"docs": "https://github.com/tirabc/lift",
+	"demo": "https://github.com/tirabc/lift",
+	"download": "https://github.com/tirabc/lift",
+	"bugs": "https://github.com/tirabc/lift/issues",
+	"maintainers": {
+		"name": "Christian Barras",
+		"email": "tirabc@gmail.com",
+		"url": "http://christianbarras.com"
+	}
+}
