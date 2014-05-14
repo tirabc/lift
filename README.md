@@ -1,4 +1,4 @@
-# LazyDOM #
+# Lift #
 
 ---
 
@@ -8,7 +8,7 @@ A jquery plugin for long lists optimised for mobile devices.
 
 You can now display more than 100,000 rows without lacking of performance.
 
-The LazyDOM jquery plugin generates just one collection of DOM nodes and uses always them to display your data. You avoid flow & reflow and you save precious milliseconds.
+The Lift jquery plugin generates just one collection of DOM nodes and uses always them to display your data. You avoid flow & reflow and you save precious milliseconds.
 
 *For developers: this plugin was created with KISS & DRY principles in mind. Don't hesitate to fork the project and to improve the code.*
 
@@ -16,16 +16,16 @@ The LazyDOM jquery plugin generates just one collection of DOM nodes and uses al
 
 ## Demos & Examples ##
 
-[http://christianbarras.com/works/lazydom](http://christianbarras.com/works/lazydom "LazyDOM - Demos & Examples")
+[http://christianbarras.com/works/lift](http://christianbarras.com/works/lift "Lift - Demos & Examples")
 
 ---
 
 ## How to use it ? ##
 
-LazyDOM depends on jQuery. Include them both in end of your HTML code:
+Lift depends on jQuery. Include them both in end of your HTML code:
 
     <script src="jquery.js" type="text/javascript"></script>
-    <script src="jquery.lazydom.js" type="text/javascript"></script>
+    <script src="jquery.lift.js" type="text/javascript"></script>
 
 ### HTML ###
 
@@ -38,12 +38,12 @@ LazyDOM depends on jQuery. Include them both in end of your HTML code:
 
     $(document).bind("mobileinit", function(){
             
-      $('#longlist').lazyDOM({
+      $('#longlist').lift({
         wrapper: $("#wrapper"),
-        models: ais_data
+        models: data
       });
           
-      // LazyDOM triggers an event each render process is finished      
+      // Lift triggers an event each render process is finished      
       $("#longlist").on( "rendered" , function(){
         $(this).listview( "refresh" );
       });
@@ -60,7 +60,7 @@ No CSS hack needed.
 
 ### Methods ###
 
-    $('#myul').lazyDOM( options );
+    $('#myul').lift( options );
 
 ### Options ###
 
@@ -72,10 +72,10 @@ No CSS hack needed.
 
 ### Events ###
 
-
+Todo
 
 ---
 
 ## License ##
 
-This plugin is available under the [MIT License](http://github.com/tirabc/lazydom/license.txt "MIT License for LazyDOM juery plugin").
+This plugin is available under the [Creative Commons License](https://github.com/tirabc/lift/blob/master/CC-LICENSE.txt "CC-BY-NC License for Lift jquery plugin").
