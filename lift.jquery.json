@@ -1,11 +1,11 @@
 {
 	"name": "lift",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"title": "Lift",
 	"author":  {
 		"name" : "Christian Barras",
 		"email" : "tirabc@gmail.com",
-		"url" : "http://chrsitianbarras.com/"
+		"url" : "http://christianbarras.com/"
 	},
 	"licenses": [
 		{
