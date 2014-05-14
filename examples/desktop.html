@@ -21,7 +21,7 @@
         </div>
         
         <script src="js/jquery-1.11.1.min.js"></script>
-        <script src="js/jquery.lift.js"></script>
+        <script src="../jquery.lift.js"></script>
         <script>
             
             $(document).bind("ready", function(){
@@ -29,7 +29,7 @@
                 $('#lazy,#load').toggle();
 
                 $.ajax({
-                    url: 'data200K.json',
+                    url: 'data/data200K.json',
                     type: 'get',
                     success: function(data){
 
