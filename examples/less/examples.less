@@ -1,0 +1,97 @@
+@import "reset";
+@import "elements";
+@import "grid";
+@import "mixins";
+
+
+// grid vars
+@columns: 12;
+@column-width: 60;
+@gutter-width: 0;
+@total-width: 100%;
+
+// box sizing
+*{
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// vars
+@bg: #DFDFDF;
+@color-light: #FEFEFE;
+@color-dark: #333;
+@space: 1em;
+
+// colors
+@blue: #4A95EF;
+@green: #81CF5C;
+@yellow: #FFF2CF;
+
+// z-index
+@front: 100;
+@middle: 50;
+@back: 1;
+
+@font-face{
+    font-family : "pacifico";
+    src : url('../fonts/Pacifico.ttf');
+}
+
+// rules
+
+html{
+}
+
+body{
+  background: @bg;
+  overflow-y: scroll;
+}
+
+h1{
+	font-size: 5em;
+	font-family: "pacifico",Georgia,serif;
+}
+
+h2{
+	font-size: 3em;
+	font-family: Tahoma,sans-serif;
+}
+
+
+#brand{
+	h1{
+		img{
+			height: 50px;
+		}
+	}
+}
+
+#demo{
+	.row(12);
+	margin-top: 3em;
+	ul{
+		.column(10);
+		.push(1);
+		li{
+			display: inline-block;
+			.column(6);
+			.border-radius(4px);
+
+			a{
+				display: block;
+				outline: none;
+				&:hover{
+					background: darken(#CCC,2%);
+				}
+				
+				padding: 1em;
+				text-align: center;
+				img{
+					height: 200px;
+				}
+			}
+
+			
+		}
+	}
+}

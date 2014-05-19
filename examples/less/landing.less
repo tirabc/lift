@@ -33,6 +33,11 @@
 @middle: 50;
 @back: 1;
 
+@font-face{
+    font-family : "pacifico";
+    src : url('../fonts/Pacifico.ttf');
+}
+
 // rules
 
 html{
@@ -45,32 +50,70 @@ body{
 
 h1{
 	font-size: 5em;
+	font-family: "pacifico",Georgia,serif;
 }
 
 h2{
 	font-size: 3em;
-	font-family: Georgia,serif;
+	font-family: Tahoma,sans-serif;
 }
 
 // global
 #app{
 	
-	.column(6);
-	.push(3);
+	.column(10);
+	.push(1);
 
+	header{
+		.row(12);
 
-	#brand{
-		padding: @space*2;
+		#brand{
+			.column(4);
+			h1{
+				img{
+					height: 50px;
+				}
+			}
+		}
+
+		#menu{
+			text-align: right;
+			ul{
+				padding: @space;
+				li{
+					display: inline-block;
+					a{
+						.menu-link();
+					}
+				}
+			}
+		}
+
+	}
+
+	section{
+		#video-wrapper{
+			.column(9);
+			#video{
+				height: 320px;
+				width: 100%;
+				.transition(all,0.5s,ease);
+			}
+		}
+		#sidebar{
+			.column(3);
+		}	
+	}
+	aside{
+		
 	}
 
 	#features{
 
-
 		.feature{
 
 			padding: @space;
-			background: @color-dark;
-			.row();
+			.row(12);
 
 			&:nth-child(odd){
 				.feature-picture-wrapper{
@@ -94,7 +137,8 @@ h2{
 				float: left;
 				.column(8);
 				h2{
-
+					color: @color-dark;
+					margin-bottom: @space;
 				}
 				p{
 

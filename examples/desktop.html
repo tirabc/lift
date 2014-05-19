@@ -13,7 +13,7 @@
         </div>
         
         <div id="lazy">
-            <h1>Lift<span>Example</span></h1>
+            <h1><img src="../img/lift7.png" height="50" alt="Lift"><span>Example</span></h1>
             <div id="wrap">
                 <ul id="ll">
                 </ul>
@@ -31,6 +31,7 @@
                 $.ajax({
                     url: 'data/data200K.json',
                     type: 'get',
+                    dataType: "json",
                     success: function(data){
 
                         $('#ll').lift({

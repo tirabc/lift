@@ -1,0 +1,33 @@
+.menu-link{
+	.link();
+	border-bottom: 4px solid transparent;
+
+	&:hover{
+		border-bottom: 4px solid @blue;
+	}
+}
+
+.link{
+	display: block;
+	font: bold @space sans-serif;
+	padding: @space;
+	color: @color-dark;
+	text-decoration: none;
+	.transition(all,0.4s,ease);
+
+	&:hover{
+		color: @blue;
+	}
+}
+
+.video_background {
+position: absolute;
+bottom: 0px;
+right: 0px;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -1000;
+overflow: hidden;
+}

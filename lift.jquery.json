@@ -1,6 +1,6 @@
 {
 	"name": "lift",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"title": "Lift",
 	"author":  {
 		"name" : "Christian Barras",
@@ -27,7 +27,7 @@
 	],
 	"homepage": "https://github.com/tirabc/lift",
 	"docs": "https://github.com/tirabc/lift",
-	"demo": "https://github.com/tirabc/lift",
+	"demo": "http://christianbarras.com/works/lift/",
 	"download": "https://github.com/tirabc/lift",
 	"bugs": "https://github.com/tirabc/lift/issues",
 	"maintainers": [

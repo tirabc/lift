@@ -31,6 +31,7 @@
                     $.ajax({
                         url: "data/data200K.json",
                         type:"get",
+                        dataType: "json",
                         success: function(data){
                             $('#lazy,#load').toggle();
                             $('#ll').lift({
