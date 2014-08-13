@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LIFT - Example</title>
+        <link rel="stylesheet" type="text/css" href="css/desktop.css"/>
+    </head>
+    <body>
+
+        <div id="load">
+            <h1>Loading data (not DOM nodes) ...</h1>
+        </div>
+        
+        <div id="lazy">
+            <h1><img src="../img/lift7.png" height="50" alt="Lift"><span>Example</span></h1>
+            <div id="wrap">
+                <ul id="ll">
+                </ul>
+            </div>
+        </div>
+        
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="../jquery.lift.js"></script>
+        <script>
+            
+            $(document).bind("ready", function(){
+            
+                $('#lazy,#load').toggle();
+
+                $.ajax({
+                    url: 'data/data200K.json',
+                    type: 'get',
+                    dataType: "json",
+                    success: function(data){
+
+                        $('#ll').lift({
+                            wrapper: $("#wrap"),
+                            height: 480,
+                            models: data,
+                            template: '<li><span class="ui-li-count">##id##</span><p>##name##</p></li>'
+                        });
+
+                    },
+                    error: function(){
+                        alert('error');
+                    }
+                })
+                
+
+                
+                $("#ll").on( "rendered" , function(){
+                    console.log('rendered');
+                });
+                
+            });
+ 
+        </script>
+        
+    </body>
+</html>

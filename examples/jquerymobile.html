@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LIFT & jQueryMobile - Example</title>
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.min.css"/>
+    </head>
+    <body style="overflow-y:hidden;">
+
+        <div id="load" style="text-align:center;font:bold 1em Sans-serif;">
+            <h1>Loading data (not DOM nodes) ...</h1>
+        </div>
+        
+        <div data-role="page" id="lazy" style="display:none;">
+            <div data-role="header" data-position="fixed" style="padding: 4px;">LIFT&nbsp;<sub>Example</sub></div>
+            <div id="wrap">
+                <ul id="ll" data-role="listview">
+                </ul>
+            </div>
+        </div>
+        
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="../jquery.lift.js"></script>
+        <script>
+            
+            $(document).bind("mobileinit", function(){
+            
+                $(document).bind('pageshow',function(){
+
+                    $.ajax({
+                        url: "data/data200K.json",
+                        type:"get",
+                        dataType: "json",
+                        success: function(data){
+                            $('#lazy,#load').toggle();
+                            $('#ll').lift({
+                                wrapper: $("#wrap"),
+                                models: data,
+                                height: $(window).outerHeight() - $('.ui-header').outerHeight() - $('.ui-footer').outerHeight(),
+                                template: '<li><span class="ui-li-count">##id##</span><p>##name##</p></li>'
+                            });
+                        },
+                        error: function(){
+                            alert('Error loading data');
+                        }
+                    })
+
+                });
+                
+                
+                $("#ll").on( "rendered" , function(){
+                    $(this).listview( "refresh" );
+                });
+                
+            });
+ 
+        </script>
+        <script src="js/jquery.mobile-1.3.2.js"></script>
+        
+    </body>
+</html>
