@@ -16,7 +16,7 @@ The Lift jquery plugin generates just one collection of DOM nodes and uses alway
 
 ## Demos & Examples ##
 
-[http://christianbarras.com/works/lift](http://christianbarras.com/works/lift "Lift - Demos & Examples")
+[http://tirabc.github.io/lift](http://tirabc.github.io/lift "Lift - Demos & Examples")
 
 ---
 
