@@ -5,7 +5,7 @@
 	"author":  {
 		"name" : "Christian Barras",
 		"email" : "tirabc@gmail.com",
-		"url" : "http://christianbarras.com/"
+		"url" : "http://tirabc.github.io"
 	},
 	"licenses": [
 		{
@@ -25,16 +25,16 @@
 		"table",
 		"large-data"
 	],
-	"homepage": "https://github.com/tirabc/lift",
-	"docs": "https://github.com/tirabc/lift",
-	"demo": "http://christianbarras.com/works/lift/",
-	"download": "https://github.com/tirabc/lift",
+	"homepage": "https://tirabc.github.io/lift",
+	"docs": "https://tirabc.github.io/lift",
+	"demo": "http://tirabc.github.io/lift",
+	"download": "https://tirabc.github.io/lift",
 	"bugs": "https://github.com/tirabc/lift/issues",
 	"maintainers": [
 		{
 			"name": "Christian Barras",
 			"email": "tirabc@gmail.com",
-			"url": "http://christianbarras.com"
+			"url": "http://tirabc.github.io"
 		}		
 	]
 }
